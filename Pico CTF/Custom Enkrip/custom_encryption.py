@@ -26,7 +26,6 @@ def is_prime(p):
         return False
     else: 
         return True
-    #fungsi ini tu intinya jika nilai si p habis di bagi 0 maka akan mengembalikan nilai false
 
 
 def dynamic_xor_encrypt(plain_text, text_key):

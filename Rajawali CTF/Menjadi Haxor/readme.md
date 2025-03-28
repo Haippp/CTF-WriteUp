@@ -4,6 +4,7 @@ Pada deskripsi challange tertulis "Sepertinya pesan ini harus di Brute Force, ta
 Bagi yang tidak tahu ASCII itu apa, ASCII adalah singkatan dari American Standard Code for Information Interchange. ASCII adalah standar internasional untuk mewakili karakter, seperti huruf, angka, dan simbol, dalam komputer.
 
 Nah untuk mendekripsinya cukup mudah kita bisa menggunakan tools brute force XOR online seperti [XOR cipher - by.dcode](https://www.dcode.fr/xor-cipher). Akan tetapi karna saya suka hal menantang saya membuat program nya sendiri menggunakan python.
+
 ## Penjelasan program
 ```python
 def XOR_brute_force(cipher):
