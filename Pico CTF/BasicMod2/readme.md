@@ -1,5 +1,5 @@
 # Deskripsi
-Ini adalah teks flagnya `104 372 110 436 262 173 354 393 351 297 241 86 262 359 256 441 124 154 165 165 219 288 42`. Dari angka angka tersebut nantinya kita disuruh untuk mengambil modulus 41 yang nantinya dicari modular inversnya. Nah hasil dari perhitungan tersebut diubah menjadi karakter dengan ketentuan 1 - 27 adalah Huruf alfabet, 28 - 36 adalah angka desimal, dan 37 adalah underscore.
+Ini adalah teks flagnya `104 372 110 436 262 173 354 393 351 297 241 86 262 359 256 441 124 154 165 165 219 288 42`. Dari angka angka tersebut nantinya kita disuruh untuk mengambil modulus 41 yang nantinya dicari modular inversnya. Modular inverse (atau invers modulo) adalah angka kebalikan dalam operasi modulo, mirip kayak kebalikan dalam perkalian biasa. di Modular inverse ini kita menjadi a * berapa yang jika nanti hasil modulonya adalah 1. Pada matematika kita mencarinya bisa menggunakan Extended Euclidean algorithm, tapi jadi lebih mudah jika kita pakai python, dengan menggunakan rumus pow(a, -1, m). Nah hasil dari perhitungan tersebut diubah menjadi karakter dengan ketentuan 1 - 27 adalah Huruf alfabet, 28 - 36 adalah angka desimal, dan 37 adalah underscore.
 ## Penyelesaian
 Kita langsung saja membuat programnya, algoritma dari program tersebut adalah :
 1. Membuat variable yang menyimpan teks flagnya
@@ -19,3 +19,4 @@ Decrypt = "".join(KarakterSet[pow(int(n), -1, 41) - 1] for n in flag.split())
 print('picoCTF{'+ Decrypt + '}')
 # output : picoCTF{1nv3r53ly_h4rd_dadaacaa}
 ```
+Dan yappp, kita dapat flagnyaXD.
