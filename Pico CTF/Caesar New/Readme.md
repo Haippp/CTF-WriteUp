@@ -1,2 +1,2 @@
-# Deskripsi 
-Pada deskripsi challange kita dijelaskan bahwa ini merupakan new type of encryption dan disuruh untuk memecahkan kode rahasianya. Kemudian kita diberikan sebuah cipher text `ihjghbjgjhfbhbfcfjflfjiifdfgffihfeigidfligigffihfjfhfhfhigfjfffjfeihihfdieieih ` dan sebuah file yang menghasilkan enkripsi tersebut. Dari penjelasan dan hasil enkripsi mungkin kita bisa menyimpulkan bahwa ini merupakan caesar cipher yang dimodifikasi.
+# Deskripsi
+Pada deskripsi challange kita dijelaskan bahwa ini merupakan new type of encryption dan disuruh untuk memecahkan kode rahasianya dan diwrap/dibungkus dengan format `picoCTF{}`. Kemudian kita diberikan sebuah cipher text `ihjghbjgjhfbhbfcfjflfjiifdfgffihfeigidfligigffihfjfhfhfhigfjfffjfeihihfdieieih ` dan sebuah file yang menghasilkan enkripsi tersebut. Kita langsung saja membuka file nya untuk menganalisa bagaimana cara enkripsinya
