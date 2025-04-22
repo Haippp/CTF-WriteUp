@@ -18,7 +18,14 @@ random_strs = [
     b'break it'
 ]
 
-for i in len(random_strs):
+hasil = ''
+for i in range(len(random_strs) ** 2):
     for j in range(2):
+        
         for rndm_bStr in random_strs[::-1]:
-            encrypt(cipher, rndm_bStr)
+            hasil += str(rndm_bStr)
+        print(hasil)
+        hasil = ''
+    print('\n\n')
+
+        

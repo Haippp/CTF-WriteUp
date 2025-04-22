@@ -66,4 +66,20 @@ Secara garis besar alur dari cara kerja program enkripsinya adalah sebagai berik
 
 ## Penyelesaian
 
-Setelah kita lihat alur dari program enkripsinya maka tahapan selanjutnya adalah membuat dekripsinya, caranya dengan membalik proses enkripsi yang ada. Mulai dari paling bawah yaitu hasil ciphernya akan kita ubah dari hex menjadi bytes. Kemudian tantangan terbesar yang kita hadapi adalah langkah ini bagaimana cara kita
+Setelah kita lihat alur dari program enkripsinya maka tahapan selanjutnya adalah membuat dekripsinya, caranya dengan membalik proses enkripsi yang ada. Mulai dari paling bawah yaitu hasil ciphernya akan kita ubah dari hex menjadi bytes. 
+Kemudian tantangan terbesar yang kita hadapi adalah langkah ini, bagaimana cara kita memngatasi percobaan perulangan yang berkali-kali XOR dengan random string yang ada. Ini sempat membuat saya pusing karena setelah di cek hasil perulangannya sampai ratusan hingga ribuan per string bytes yang ada. Akan tetapi setelah saya coba melihat hasil XOR yang beberapa kali ini dengan mencoba menambahkan beberapa syntax hasil enkripsi XOR beberapa kali seperti di bawah.
+```python
+xor1 = xor(flag, random_strs[8])
+xor2 = xor(xor1, random_strs[8])
+xor3 = xor(xor2, random_strs[8])
+xor4 = xor(xor3, random_strs[8])
+print('1.', xor1)
+# output : 1. b'2\x13\x10G2z{n\x04]Q\x1au\x1c};D6\x03_J/\x026O_\x05\x1a(^d\x0bT\x17\x1emSA'
+print('2.', xor2)
+# output : 2. b'Weu5W\x0c\x1e\x1ca+4h\x10j\x18I!@f-/YgD*)`hM(\x01y1a{\x1f67'
+print('3.', xor3)
+# output : 3. b'2\x13\x10G2z{n\x04]Q\x1au\x1c};D6\x03_J/\x026O_\x05\x1a(^d\x0bT\x17\x1emSA'
+print('4.', xor4)
+# output : 4. b'Weu5W\x0c\x1e\x1ca+4h\x10j\x18I!@f-/YgD*)`hM(\x01y1a{\x1f67'
+```
+Saya menemukan pola dimana hasil enkripsi XOR ganji dengan genap memiliki hasil yang sama. Sehingga kita bisa ambil kesimpulan berapa kalipun hasil enkripsinya semisal 7 kali XOR hasilnya akan sama dengan yang 1 kali XOR atau semisal 24 kali XOR hasilnya akan sama dengan yang 2 kali XOR. Jadi kita akan hanya perlu mencoba perulangan sebanyak 5! faktorial atau 120 kali yang dimana simplenya kombinasinya seperti ganjil ganji, ganjil genap, sampai terkahir genap, genap.
