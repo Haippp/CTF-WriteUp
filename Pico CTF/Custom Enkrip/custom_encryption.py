@@ -8,13 +8,16 @@ def generator(g, x, p):
 
 
 def encrypt(plain_text, key):
-    #membuat variable array untuk si chiper.
+    # membuat variable array untuk si chiper.
     cipher = []
-    #melakukan perulangan berdsarkan panjang karakter plain text
+    # melakukan perulangan berdsarkan panjang 
+    # karakter plain text
     for char in plain_text:
         cipher.append(((ord(char) * key *311)))
-        #kemudian mengubah karakter jadi ordinal number dan mengalikannya dengan key dan 311
-        #lalu menambahkannya ke chiper dan mengembalikan nilai chiper
+        #kemudian mengubah karakter jadi ordinal 
+        # number dan mengalikannya dengan key dan
+        # 311 lalu menambahkannya ke chiper dan 
+        # mengembalikan nilai chiper
     return cipher
 
 def is_prime(p):
