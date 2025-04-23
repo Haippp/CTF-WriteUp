@@ -23,7 +23,7 @@ def shift(c, k):
 	# Mengubah karakter key menjadi urutan b16
 	t2 = ord(k) - LOWERCASE_OFFSET
 	# Menjumlahkan t1 dan t2 kemudian di mod dengan panjang Alphabet 
-	# dan hasil dari perhitungan tersebut nantinya menjadi index pada array ALPHABET
+	# dan hasil dari perhitungan tersebut nantinya menjadi index array ALPHABET
 	return ALPHABET[(t1 + t2) % len(ALPHABET)]
 
 flag = "redacted"
