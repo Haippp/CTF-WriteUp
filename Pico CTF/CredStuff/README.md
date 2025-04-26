@@ -28,4 +28,4 @@ for i, nama in enumerate(user):
 print(cipher)
 # output: cvpbPGS{P7e1S_54I35_71Z3}
 ```
-Dan yap flag tersebut tinggal kita enkripsikan lagi, menggunakan [ROT bruteforce](https://www.dcode.fr/rot-cipher) dan kita menemuka flagnyaa yippi:joy:!
+Dan yap flag tersebut tinggal kita enkripsikan lagi, menggunakan [ROT bruteforce](https://www.dcode.fr/rot-cipher) dan kita menemuka flagnyaa yippi!
