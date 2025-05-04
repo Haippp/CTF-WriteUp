@@ -1,7 +1,7 @@
 from random import randint
 from pwn import xor
 
-def encrypt(ptxt, key):
+def decrypt(ptxt, key):
     ctxt = b''
     for i in range(len(ptxt)):
         a = ptxt[i]
@@ -10,6 +10,8 @@ def encrypt(ptxt, key):
     return ctxt
 
 cipher = bytes.fromhex("57657535570c1e1c612b3468106a18492140662d2f5967442a2960684d28017931617b1f3637")
+key = b'Africa!'
+
 random_strs = [
     b'my encryption method',
     b'is absolutely impenetrable',
@@ -18,7 +20,17 @@ random_strs = [
     b'break it'
 ]
 
-for i in len(random_strs):
+for i in range(2):
+    cipher = decrypt(cipher, random_strs[0])
     for j in range(2):
-        for rndm_bStr in random_strs[::-1]:
-            encrypt(cipher, rndm_bStr)
+        cipher = decrypt(cipher, random_strs[1])
+        for k in range(2):
+            cipher = decrypt(cipher, random_strs[2])
+            for l in range(2):
+                cipher = decrypt(cipher, random_strs[3])
+                for m in range(2):
+                    cipher = decrypt(cipher, random_strs[4])
+                    Pkey = decrypt(cipher, key)
+                    print(Pkey) 
+
+key = b'picoCTF{'
