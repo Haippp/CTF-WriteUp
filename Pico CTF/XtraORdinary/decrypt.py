@@ -32,5 +32,3 @@ for i in range(2):
                     cipher = decrypt(cipher, random_strs[4])
                     Pkey = decrypt(cipher, key)
                     print(Pkey) 
-
-key = b'picoCTF{'
