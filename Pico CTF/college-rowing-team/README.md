@@ -1,8 +1,9 @@
 # college-rowing-team
 ## Deskripsi Challange
 Saya baru saja bergabung dengan tim dayung kampus saya! Untuk memberikan kesan pertama yang baik, saya mulai mengirimkan pesan otomatis yang positif kepada rekan satu tim saya setiap hari. Saya bahkan mengirimi mereka bendera dari waktu ke waktu!
-- file : [encrypt](./encrypt.py)
--      : [massage](./encrypted-messages.txt)
+file :
+- [encrypt](./encrypt.py)
+- [massage](./encrypted-messages.txt)
 
 ## Penyelesaian
 Setelah saya membuka file pesannya saya melihat bahwa e nya atau exponennya itu cukup rendah. Serta c atau pesan terenkripsinya lebih kecil dari pada n. Jadi mungkin saja bahwa pesan tersebut hanya di pangkatkan dan tidak di moduluskan.
